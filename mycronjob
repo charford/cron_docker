@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+import time
+
+data_file = open('/API_3_DS2_en_csv_v2.csv', 'r')
+
+start_time = time.time()
+count = 0
+for line in data_file.readlines():
+  count += 1
+
+elapsed_time = time.time() - start_time
+print("Found %s lines of data in %s" % (count, elapsed_time))
